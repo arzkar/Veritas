@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: veritas_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-veritas_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-veritas_pass_2026}
+      POSTGRES_DB: ${POSTGRES_DB:-veritas}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+  veritas_vault: # For PDF pitch decks
+  docling_models: # For Docling ML weights
