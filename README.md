@@ -2,12 +2,10 @@
 
 Veritas is a local-first, multi-agent AI system designed to perform adversarial due diligence on startup pitch decks. Unlike standard chatbots, Veritas operates as an **Investigative Operating System**—treating startup claims as hypotheses to be verified against external reality.
 
-![Veritas Terminal UI Concept](https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/og.png) *(UI placeholder - Terminal Aesthetic)*
-
 ## 🚀 Key Features
 
 - **Zero-Trust Claim Extraction:** Automatically identifies "Hard Claims" (revenue, growth, partners) while filtering out marketing fluff.
-- **Adversarial Research:** Dispatches agents to find evidence that *contradicts* startup claims using Tavily & Serper.
+- **Adversarial Research:** Dispatches agents to find evidence that _contradicts_ startup claims using Tavily & Serper.
 - **The Skeptic Agent:** Models "expected visibility" to detect "the dog that didn't bark"—identifying when evidence is suspiciously absent.
 - **Bayesian Credibility Engine:** Mathematically propagates trust and decay throughout the company narrative.
 - **Investigative Terminal:** A multi-panel Dashboard built with Next.js for real-time trace inspection and source-grounded reasoning.
@@ -28,24 +26,30 @@ Veritas is a local-first, multi-agent AI system designed to perform adversarial 
 ## 🏁 Getting Started
 
 ### 1. Prerequisites
+
 - **Python 3.12+** (via `pyenv`)
 - **Node.js 18+**
 - **Ollama** installed and running
 
 ### 2. Setup Models
+
 Pull the required local models for reasoning and embeddings:
+
 ```bash
 ollama pull qwen3:8b
 ollama pull nomic-embed-text
 ```
 
 ### 3. Environment Configuration
+
 Create a `.env` file in the root directory:
+
 ```env
 TAVILY_API_KEY=your_api_key_here
 ```
 
 ### 4. Installation
+
 ```bash
 # Activate your environment
 pyenv activate veritas
@@ -63,19 +67,23 @@ npm install
 ## 🏃 Running the System
 
 ### Step 1: Start the Backend
+
 ```bash
 # In the root directory
 python -m app.main
 ```
-*The API will be available at `http://localhost:8000`*
+
+_The API will be available at `http://localhost:8000`_
 
 ### Step 2: Start the Frontend
+
 ```bash
 # In a new terminal
 cd frontend
 npm run dev
 ```
-*The Terminal UI will be available at `http://localhost:3000`*
+
+_The Terminal UI will be available at `http://localhost:3000`_
 
 ---
 
@@ -100,6 +108,7 @@ npm run dev
 ## ⚖️ Epistemic Philosophy
 
 Veritas is built on **Institutional Skepticism**.
+
 - **Supported:** Evidence corroborates the claim.
 - **Contradicted:** Reality conflicts with the narrative.
 - **Suspiciously Absent:** A high-impact claim has zero external footprint.
@@ -108,10 +117,13 @@ Veritas is built on **Institutional Skepticism**.
 ---
 
 ## 📜 Documentation
+
 For deep-dives into the architecture, see:
+
 - `docs/technical-specification.md`
 - `docs/ui-ux-specification.md`
 - `TASKS.md`
 
 ---
-*Built for the future of rigorous financial intelligence.*
+
+_Built for the future of rigorous financial intelligence._
